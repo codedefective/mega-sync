@@ -1,5 +1,5 @@
 # Jlesage'in hazır GUI altyapısını kullanıyoruz (Ubuntu tabanlı)
-FROM --platform=linux/amd64 jlesage/baseimage-gui:ubuntu-24.04-v4
+FROM jlesage/baseimage-gui:ubuntu-24.04-v4
 
 ENV APP_NAME="MEGAync"
 

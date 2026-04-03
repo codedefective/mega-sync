@@ -2,6 +2,7 @@
 FROM jlesage/baseimage-gui:ubuntu-24.04-v4
 
 ENV APP_NAME="MEGAync"
+ARG TARGETARCH
 
 # 1. Temel araçları ve varlığı kesin olan kütüphaneleri yükle
 RUN apt-get update && apt-get install -y \
@@ -19,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. MEGA paketini kopyala
-COPY mega.deb /tmp/mega.deb
+COPY mega_${TARGETARCH}.deb /tmp/mega.deb
 
 # 3. Direkt apt üzerinden kur (apt, bağımlılıkları gdebi'den bazen daha iyi çözer)
 RUN apt-get update && \

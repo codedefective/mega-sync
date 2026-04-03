@@ -2,9 +2,6 @@ name: mega
 services:
   mega:
     build:
-      platforms:
-        - linux/amd64
-        - linux/arm64
       context: .
     environment:
       APP_NAME: "MeGa"

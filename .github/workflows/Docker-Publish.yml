@@ -37,8 +37,3 @@ jobs:
             codedefective/mega-sync:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
-      - name: Invoke deployment hook
-        uses: distributhor/workflow-webhook@v3
-        with:
-          webhook_url: ${{ secrets.WEBHOOK_URL }}
